@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog | Activamente</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="img/logo.png" alt="JM Logo" class="nav-logo">
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Inicio</a>
+                <a href="index.html#method">Método</a>
+                <a href="index.html#about">Sobre Mí</a>
+                <a href="blog.html" class="active">Blog</a>
+                <a href="index.html#cta" class="btn btn-nav">Agendar Llamada</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Hero -->
+    <header class="blog-hero">
+        <div class="container">
+            <div class="blog-hero-content reveal">
+                <span class="eyebrow-light">El Blog</span>
+                <h1>Alto Rendimiento <br>& Salud Ejecutiva</h1>
+                <p>Estrategias basadas en evidencia para optimizar tu biología sin sacrificar tu carrera.</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Category Filter Tabs -->
+    <section class="category-filter">
+        <div class="container">
+            <div class="filter-tabs" id="filterTabs">
+                <button class="filter-tab active" data-category="all">Todos</button>
+                <button class="filter-tab" data-category="nutricion">Nutrición</button>
+                <button class="filter-tab" data-category="entrenamiento">Entrenamiento</button>
+                <button class="filter-tab" data-category="mentalidad">Mentalidad</button>
+                <button class="filter-tab" data-category="suplementacion">Suplementación</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Feed -->
+    <section class="blog-feed">
+        <div class="container">
+
+            <!-- Featured Article -->
+            <article class="featured-article reveal delay-100" data-category="nutricion">
+                <div class="featured-image-wrapper">
+                    <a href="article-ayuno.html">
+                        <img src="img/hero-image.jpg" alt="Ayuno Intermitente" class="featured-img-lg">
+                    </a>
+                </div>
+                <div class="featured-text">
+                    <div class="meta">
+                        <span class="tag">Nutrición</span>
+                        <span class="date">6 Diciembre 2025</span>
+                    </div>
+                    <h2><a href="article-ayuno.html">La Verdad sobre el Ayuno Intermitente en Ejecutivos</a></h2>
+                    <p>¿Es realmente la solución para mantener la energía en jornadas de 12 horas? Analizamos la ciencia
+                        detrás del hype y cómo aplicarlo sin perder masa muscular.</p>
+                    <a href="article-ayuno.html" class="btn-link">Leer Artículo Completo &rarr;</a>
+                </div>
+            </article>
+
+            <!-- Grid + Sidebar -->
+            <div class="feed-layout">
+
+                <!-- Articles Grid -->
+                <div class="articles-grid" id="articlesGrid">
+
+                    <article class="article-card reveal" data-category="nutricion">
+                        <a href="article-plato-perfecto.html" class="card-link">
+                            <div class="card-media">
+                                <img src="img/nutrition-tip.jpg" alt="Nutrición">
+                                <span class="card-tag">Nutrición</span>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-date">2 Diciembre 2025</span>
+                                <h3>Plato Perfecto: La Regla del 50/25/25</h3>
+                                <p>Cómo diseñar tus comidas para no sentir sueño por la tarde.</p>
+                                <span class="read-more">Leer artículo &rarr;</span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="article-card reveal delay-100" data-category="entrenamiento">
+                        <a href="article-kettlebell.html" class="card-link">
+                            <div class="card-media">
+                                <img src="img/training-tip.jpg" alt="Entrenamiento">
+                                <span class="card-tag">Entrenamiento</span>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-date">28 Noviembre 2025</span>
+                                <h3>Kettlebell Swing: El Rey de los Ejercicios</h3>
+                                <p>Quema grasa y fortalece tu espalda en solo 10 minutos al día.</p>
+                                <span class="read-more">Leer artículo &rarr;</span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="article-card reveal delay-200" data-category="mentalidad">
+                        <a href="article-estres.html" class="card-link">
+                            <div class="card-media">
+                                <img src="img/method-mindset.jpg" alt="Mentalidad">
+                                <span class="card-tag">Mentalidad</span>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-date">20 Noviembre 2025</span>
+                                <h3>Gestión del Estrés en Alta Dirección</h3>
+                                <p>Técnicas de respiración para bajar el cortisol antes de una reunión.</p>
+                                <span class="read-more">Leer artículo &rarr;</span>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="article-card reveal" data-category="suplementacion">
+                        <a href="article-vitalidad.html" class="card-link">
+                            <div class="card-media">
+                                <img src="img/blog-2.jpg" alt="Suplementos">
+                                <span class="card-tag">Suplementación</span>
+                            </div>
+                            <div class="card-content">
+                                <span class="card-date">15 Noviembre 2025</span>
+                                <h3>El Triángulo de la Vitalidad +40</h3>
+                                <p>Omega-3, Magnesio y Vitamina D: Por qué son innegociables.</p>
+                                <span class="read-more">Leer artículo &rarr;</span>
+                            </div>
+                        </a>
+                    </article>
+
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="sidebar-sticky reveal delay-300">
+                    <div class="widget author-profile">
+                        <img src="img/jesus-profile.jpg" alt="Jesús Martínez">
+                        <h4>Jesús Martínez</h4>
+                        <p>Especialista en Rendimiento Físico para Ejecutivos. +12 años transformando la salud de
+                            líderes empresariales.</p>
+                        <a href="index.html#cta" class="btn btn-primary btn-sm btn-full">Trabaja Conmigo</a>
+                    </div>
+
+                    <div class="widget categories-list">
+                        <h4>Explorar Temas</h4>
+                        <ul>
+                            <li><a href="#" class="category-link" data-category="nutricion">Nutrición
+                                    <span>(2)</span></a></li>
+                            <li><a href="#" class="category-link" data-category="entrenamiento">Entrenamiento
+                                    <span>(1)</span></a></li>
+                            <li><a href="#" class="category-link" data-category="mentalidad">Mentalidad
+                                    <span>(1)</span></a></li>
+                            <li><a href="#" class="category-link" data-category="suplementacion">Suplementación
+                                    <span>(1)</span></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="widget newsletter-widget">
+                        <h4>Newsletter Semanal</h4>
+                        <p>Recibe estrategias de salud ejecutiva cada lunes.</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Tu email" required>
+                            <button type="submit" class="btn btn-primary btn-sm">Suscribir</button>
+                        </form>
+                    </div>
+                </aside>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <img src="img/logo.png" alt="Logo" class="footer-logo">
+                <p>&copy; 2025 Jesús Martínez. Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Aviso Legal</a>
+                <a href="#">Privacidad</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
