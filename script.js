@@ -209,4 +209,69 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    // ========================================
+    // STICKY MOBILE CTA BUTTON
+    // ========================================
+    const stickyCta = document.getElementById('stickyCta');
+    const ctaSection = document.getElementById('cta');
+
+    if (stickyCta && ctaSection) {
+        window.addEventListener('scroll', function () {
+            const scrollPosition = window.scrollY;
+            const ctaSectionTop = ctaSection.offsetTop;
+            const ctaSectionBottom = ctaSectionTop + ctaSection.offsetHeight;
+
+            // Show sticky button after scrolling 300px, but hide when CTA section is visible
+            if (scrollPosition > 300 && (scrollPosition < ctaSectionTop - 100 || scrollPosition > ctaSectionBottom)) {
+                stickyCta.classList.add('visible');
+            } else {
+                stickyCta.classList.remove('visible');
+            }
+        });
+    }
+
+    // ========================================
+    // LEAD FORM SUBMISSION
+    // ========================================
+    const leadForm = document.getElementById('leadForm');
+
+    if (leadForm) {
+        leadForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            // Get form values
+            const nombre = document.getElementById('nombre').value;
+            const whatsapp = document.getElementById('whatsapp').value;
+            const limitacion = document.getElementById('limitacion').value;
+
+            // Construct WhatsApp message
+            const limitacionTexto = {
+                'dolor': 'Dolor físico constante',
+                'peso': 'Exceso de peso',
+                'energia': 'Falta total de energía'
+            };
+
+            const mensaje = `Hola, soy ${nombre}. Quiero analizar mi caso.%0A%0A` +
+                `Mi principal limitación es: ${limitacionTexto[limitacion]}%0A%0A` +
+                `Mi WhatsApp: +34${whatsapp}`;
+
+            // Replace with Jesús's actual WhatsApp number
+            const jesusWhatsApp = '34123456789'; // TODO: Replace with actual number
+            const whatsappURL = `https://wa.me/${jesusWhatsApp}?text=${mensaje}`;
+
+            // Show confirmation and redirect
+            const submitButton = this.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            submitButton.textContent = '✓ ¡ENVIANDO...!';
+            submitButton.disabled = true;
+
+            setTimeout(() => {
+                window.open(whatsappURL, '_blank');
+                submitButton.textContent = originalText;
+                submitButton.disabled = false;
+                this.reset();
+            }, 500);
+        });
+    }
+
 });
