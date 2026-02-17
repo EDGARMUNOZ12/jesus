@@ -171,64 +171,45 @@ document.addEventListener('DOMContentLoaded', function () {
     // ========================================
     // NEWSLETTER FORM
     // ========================================
-    const newsletterForm = document.querySelector('.newsletter-form');
-
-    if (newsletterForm) {
-        newsletterForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            const emailInput = this.querySelector('input[type="email"]');
-            const email = emailInput.value;
-
-            // Simulate subscription
-            const button = this.querySelector('button');
-            const originalText = button.textContent;
-
-            button.textContent = 'Â¡Suscrito!';
-            button.disabled = true;
-            emailInput.value = '';
-
-            setTimeout(() => {
-                button.textContent = originalText;
-                button.disabled = false;
-            }, 3000);
+}, 3000);
         });
     }
 
-    // ========================================
-    // NAVBAR SCROLL EFFECT
-    // ========================================
-    const navbar = document.querySelector('.navbar');
+// ========================================
+// NAVBAR SCROLL EFFECT
+// ========================================
+const navbar = document.querySelector('.navbar');
 
-    if (navbar) {
-        window.addEventListener('scroll', function () {
-            if (window.scrollY > 100) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
-    }
+if (navbar) {
+    window.addEventListener('scroll', function () {
+        if (window.scrollY > 100) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+}
 
-    // ========================================
-    // STICKY MOBILE CTA BUTTON
-    // ========================================
-    const stickyCta = document.getElementById('stickyCta');
-    const ctaSection = document.getElementById('cta');
+// ========================================
+// STICKY MOBILE CTA BUTTON
+// ========================================
+const stickyCta = document.getElementById('stickyCta');
+const ctaSection = document.getElementById('cta');
 
-    if (stickyCta && ctaSection) {
-        window.addEventListener('scroll', function () {
-            const scrollPosition = window.scrollY;
-            const ctaSectionTop = ctaSection.offsetTop;
-            const ctaSectionBottom = ctaSectionTop + ctaSection.offsetHeight;
+if (stickyCta && ctaSection) {
+    window.addEventListener('scroll', function () {
+        const scrollPosition = window.scrollY;
+        const ctaSectionTop = ctaSection.offsetTop;
+        const ctaSectionBottom = ctaSectionTop + ctaSection.offsetHeight;
 
-            // Show sticky button after scrolling 300px, but hide when CTA section is visible
-            if (scrollPosition > 300 && (scrollPosition < ctaSectionTop - 100 || scrollPosition > ctaSectionBottom)) {
-                stickyCta.classList.add('visible');
-            } else {
-                stickyCta.classList.remove('visible');
-            }
-        });
-    }
+        // Show sticky button after scrolling 300px, but hide when CTA section is visible
+        if (scrollPosition > 300 && (scrollPosition < ctaSectionTop - 100 || scrollPosition > ctaSectionBottom)) {
+            stickyCta.classList.add('visible');
+        } else {
+            stickyCta.classList.remove('visible');
+        }
+    });
+}
 
     // ========================================
     // LEAD FORM SUBMISSION

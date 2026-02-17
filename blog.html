@@ -178,11 +178,13 @@
                     </div>
 
                     <div class="widget newsletter-widget">
-                        <h4>Newsletter Semanal</h4>
-                        <p>Recibe estrategias de salud ejecutiva cada lunes.</p>
-                        <form class="newsletter-form">
-                            <input type="email" placeholder="Tu email" required>
-                            <button type="submit" class="btn btn-primary btn-sm">Suscribir</button>
+                        <h3>📧 Newsletter Semanal</h3>
+                        <p>Recibe artículos exclusivos cada semana</p>
+                        <form class="newsletter-form" name="newsletter-semanal" method="POST" data-netlify="true"
+                            action="/gracias.html">
+                            <input type="hidden" name="form-name" value="newsletter-semanal">
+                            <input type="email" name="email" placeholder="Tu email" required>
+                            <button type="submit" class="btn btn-primary">Suscribirme</button>
                         </form>
                     </div>
                 </aside>
