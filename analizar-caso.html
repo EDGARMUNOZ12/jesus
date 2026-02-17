@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analiza Tu Caso | Jesús Martínez</title>
+    <meta name="description"
+        content="Analiza tu caso con Jesús Martínez. Formulario de cualificación gratuito para transformación +50.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-link">
+                <img src="img/logo.png" alt="JM Logo" class="nav-logo">
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Inicio</a>
+                <a href="metodo.html">Método</a>
+                <a href="sobre-mi.html">Sobre Mí</a>
+                <a href="blog.html">Blog</a>
+                <a href="analizar-caso.html" class="btn btn-nav">ANALIZAR MI CASO</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CTA Section with Form -->
+    <section class="cta-final" id="cta" style="padding-top: 140px; min-height: 85vh;">
+        <div class="container text-center reveal">
+            <h1>¿Listo para Quitarte 10 Años de Encima?</h1>
+            <p>Las plazas son limitadas para garantizar la máxima calidad en el servicio personalizado.</p>
+
+            <div class="urgency-banner">
+                <p>⚠️ <strong>Agenda abierta:</strong> Solo quedan 2 plazas disponibles para este mes</p>
+            </div>
+
+            <form class="lead-form" id="leadForm" action="#" method="POST">
+                <div class="form-group">
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required
+                        class="form-input">
+                </div>
+
+                <div class="form-group">
+                    <div class="phone-input-wrapper">
+                        <span class="phone-prefix">+34</span>
+                        <input type="tel" id="whatsapp" name="whatsapp" placeholder="Número de WhatsApp" required
+                            class="form-input phone-input" pattern="[0-9]{9}" maxlength="9">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <select id="limitacion" name="limitacion" required class="form-select">
+                        <option value="" disabled selected>¿Qué te limita más hoy?</option>
+                        <option value="dolor">Dolor físico constante</option>
+                        <option value="peso">Exceso de peso</option>
+                        <option value="energia">Falta total de energía</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-large btn-full">ENVIAR MI ANÁLISIS GRATUITO</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Guarantee Section -->
+    <section class="guarantee guarantee-highlight" style="padding-top: 60px;">
+        <div class="container">
+            <div class="guarantee-badge reveal">
+                <div class="shield-icon">🛡️</div>
+                <div class="guarantee-text">
+                    <h3>✅ Garantía de Excelencia de 90 Días</h3>
+                    <p><strong>Si después de 90 días siguiendo el Método MUTA360º no has perdido al menos 8kg de grasa,
+                            eliminado tus dolores físicos y recuperado tu energía diaria, te devuelvo el 100% de tu
+                            inversión.</strong></p>
+                    <p>Sin preguntas. Sin letra pequeña. Mi compromiso total es tu transformación real. Si pones el
+                        esfuerzo y sigues el método, los resultados están garantizados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-content">
+            <div class="footer-brand">
+                <img src="img/logo.png" alt="Logo" class="footer-logo">
+                <p>&copy; 2025 Jesús Martínez. Todos los derechos reservados.</p>
+            </div>
+            <div class="footer-links">
+                <a href="#">Aviso Legal</a>
+                <a href="#">Privacidad</a>
+                <a href="#">Contacto</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
