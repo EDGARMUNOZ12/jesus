@@ -10,6 +10,7 @@
     --text-muted: #64748B;
     --accent-gold: #C5A059;
     --accent-gold-dark: #A68A45;
+    --accent-blue: #1E40AF;
 
     /* Typography */
     --font-heading: 'Playfair Display', serif;
@@ -45,8 +46,8 @@ body {
     font-family: var(--font-body);
     color: var(--text-dark);
     background-color: var(--bg-white);
-    line-height: 1.7;
-    font-size: 16px;
+    line-height: 1.8;
+    font-size: 18px;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -72,13 +73,14 @@ h2 {
 }
 
 h3 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     margin-bottom: 0.75rem;
 }
 
 p {
     color: var(--text-muted);
     margin-bottom: 1.5rem;
+    font-size: 1.05rem;
 }
 
 img {
@@ -118,7 +120,7 @@ a {
 }
 
 .subtitle {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: var(--text-muted);
     max-width: 600px;
     margin: 0 auto 3rem;
@@ -256,9 +258,10 @@ a {
 }
 
 .hero-content .lead {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     margin-bottom: 2.5rem;
     max-width: 500px;
+    line-height: 1.7;
 }
 
 .hero-cta {
@@ -527,7 +530,7 @@ a {
    ======================================== */
 .cta-final {
     padding: var(--section-padding) 0;
-    background: var(--text-dark);
+    background: var(--accent-blue);
     color: var(--bg-white);
 }
 
