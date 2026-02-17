@@ -171,45 +171,43 @@ document.addEventListener('DOMContentLoaded', function () {
     // ========================================
     // NEWSLETTER FORM
     // ========================================
-}, 3000);
+    // NEWSLETTER - Handled by Netlify Forms (no JavaScript interception needed)
+
+    // ========================================
+    // NAVBAR SCROLL EFFECT
+    // ========================================
+    const navbar = document.querySelector('.navbar');
+
+    if (navbar) {
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
         });
     }
 
-// ========================================
-// NAVBAR SCROLL EFFECT
-// ========================================
-const navbar = document.querySelector('.navbar');
+    // ========================================
+    // STICKY MOBILE CTA BUTTON
+    // ========================================
+    const stickyCta = document.getElementById('stickyCta');
+    const ctaSection = document.getElementById('cta');
 
-if (navbar) {
-    window.addEventListener('scroll', function () {
-        if (window.scrollY > 100) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
-}
+    if (stickyCta && ctaSection) {
+        window.addEventListener('scroll', function () {
+            const scrollPosition = window.scrollY;
+            const ctaSectionTop = ctaSection.offsetTop;
+            const ctaSectionBottom = ctaSectionTop + ctaSection.offsetHeight;
 
-// ========================================
-// STICKY MOBILE CTA BUTTON
-// ========================================
-const stickyCta = document.getElementById('stickyCta');
-const ctaSection = document.getElementById('cta');
-
-if (stickyCta && ctaSection) {
-    window.addEventListener('scroll', function () {
-        const scrollPosition = window.scrollY;
-        const ctaSectionTop = ctaSection.offsetTop;
-        const ctaSectionBottom = ctaSectionTop + ctaSection.offsetHeight;
-
-        // Show sticky button after scrolling 300px, but hide when CTA section is visible
-        if (scrollPosition > 300 && (scrollPosition < ctaSectionTop - 100 || scrollPosition > ctaSectionBottom)) {
-            stickyCta.classList.add('visible');
-        } else {
-            stickyCta.classList.remove('visible');
-        }
-    });
-}
+            // Show sticky button after scrolling 300px, but hide when CTA section is visible
+            if (scrollPosition > 300 && (scrollPosition < ctaSectionTop - 100 || scrollPosition > ctaSectionBottom)) {
+                stickyCta.classList.add('visible');
+            } else {
+                stickyCta.classList.remove('visible');
+            }
+        });
+    }
 
     // ========================================
     // LEAD FORM SUBMISSION
