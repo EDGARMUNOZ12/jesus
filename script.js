@@ -1,4 +1,4 @@
-// ========================================
+﻿// ========================================
 // ACTIVAMENTE - Professional JavaScript
 // ========================================
 
@@ -132,7 +132,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (!noResultsMsg) {
                     noResultsMsg = document.createElement('div');
                     noResultsMsg.className = 'no-results';
-                    noResultsMsg.innerHTML = '<p>No hay artículos en esta categoría todavía.</p>';
+                    noResultsMsg.innerHTML = '<p>No hay artÃ­culos en esta categorÃ­a todavÃ­a.</p>';
                     articlesGrid.appendChild(noResultsMsg);
                 }
             } else if (noResultsMsg) {
@@ -183,7 +183,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const button = this.querySelector('button');
             const originalText = button.textContent;
 
-            button.textContent = '¡Suscrito!';
+            button.textContent = 'Â¡Suscrito!';
             button.disabled = true;
             emailInput.value = '';
 
@@ -232,46 +232,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // ========================================
     // LEAD FORM SUBMISSION
-    // ========================================
-    const leadForm = document.getElementById('leadForm');
-
-    if (leadForm) {
-        leadForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            // Get form values
-            const nombre = document.getElementById('nombre').value;
-            const whatsapp = document.getElementById('whatsapp').value;
-            const limitacion = document.getElementById('limitacion').value;
-
-            // Construct WhatsApp message
-            const limitacionTexto = {
-                'dolor': 'Dolor físico constante',
-                'peso': 'Exceso de peso',
-                'energia': 'Falta total de energía'
-            };
-
-            const mensaje = `Hola, soy ${nombre}. Quiero analizar mi caso.%0A%0A` +
-                `Mi principal limitación es: ${limitacionTexto[limitacion]}%0A%0A` +
-                `Mi WhatsApp: +34${whatsapp}`;
-
-            // Replace with Jesús's actual WhatsApp number
-            const jesusWhatsApp = '34123456789'; // TODO: Replace with actual number
-            const whatsappURL = `https://wa.me/${jesusWhatsApp}?text=${mensaje}`;
-
-            // Show confirmation and redirect
-            const submitButton = this.querySelector('button[type="submit"]');
-            const originalText = submitButton.textContent;
-            submitButton.textContent = '✓ ¡ENVIANDO...!';
-            submitButton.disabled = true;
-
-            setTimeout(() => {
-                window.open(whatsappURL, '_blank');
-                submitButton.textContent = originalText;
-                submitButton.disabled = false;
-                this.reset();
-            }, 500);
-        });
+    // LEAD FORM - Handled by Netlify Forms (no JavaScript interception needed)
     }
 
 });
