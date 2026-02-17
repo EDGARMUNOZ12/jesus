@@ -232,7 +232,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // ========================================
     // LEAD FORM SUBMISSION
+    // ========================================
     // LEAD FORM - Handled by Netlify Forms (no JavaScript interception needed)
-    }
 
 });
